@@ -1,4 +1,4 @@
 jdk:
   - openjdk11
 install:
-  - ./gradlew :arouter-api:assemble :arouter-api:install --no-daemon
+  - ./gradlew :arouter-api:assemble :arouter-api:install -x androidJavadocs --no-daemon
