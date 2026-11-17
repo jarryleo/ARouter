@@ -73,6 +73,25 @@ def configurePom(pom) {
                 name POM_DEVELOPER_NAME
             }
         }
+
+        // JitPack 收割 mavenInstaller 制品时不会自动携带依赖，显式声明
+        dependencies {
+            dependency {
+                groupId 'com.alibaba'
+                artifactId 'arouter-annotation'
+                version '1.0.6'
+            }
+            dependency {
+                groupId 'androidx.core'
+                artifactId 'core'
+                version '1.9.0'
+            }
+            dependency {
+                groupId 'androidx.fragment'
+                artifactId 'fragment'
+                version '1.5.7'
+            }
+        }
     }
 }
 
